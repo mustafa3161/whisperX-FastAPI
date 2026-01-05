@@ -4,13 +4,6 @@ services:
       context: .
       dockerfile: Dockerfile
     image: whisperx-service
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
     container_name: whisperx-container
     env_file:
       - .env
